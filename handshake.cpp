@@ -1,6 +1,6 @@
 /*
   Given T number of persons in a room, count the number of minimum handshakes
-  that will occur if each person shook hands with everyone else at lease once.
+  that will occur if each person shook hands with everyone else at least once.
 */
 
 #include <bits/stdc++.h>
