@@ -16,7 +16,7 @@ int main() {
   }
 
   for (int i = 0; i < n; ++i) {
-    cout << (a[i] - 1) * (static_cast<float>(a[i]) / 2) << "\n";
+    cout << (a[i] - 1) * a[i] / 2 << "\n";
   }
 
   return 0;
