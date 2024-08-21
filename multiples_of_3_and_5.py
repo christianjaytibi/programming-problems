@@ -5,24 +5,12 @@
   https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem
 """
 
-from math import lcm
+#!/bin/python3
 
-
-def solve(n):
-    k = [3, 5, lcm(3, 5)]
-
-    sum = 0
-    for i in range(len(k)):
-        m = (n - 1) // k[i]
-        m = m * (m + 1) // 2
-
-        if i == 2:
-            sum -= m * k[i]
-            break
-
-        sum += m * k[i]
-
-    print(sum)
+def solve(n, k):
+    m = (n - 1) // k
+    m = m * (m + 1) // 2
+    return m * k
 
 
 t = int(input())
@@ -32,4 +20,4 @@ for _ in range(t):
     arr.append(n)
 
 for n in arr:
-    solve(n)
+    print(solve(n, 3) + solve(n, 5) - solve(n, 15))
